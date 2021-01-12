@@ -1,13 +1,13 @@
-#%matplotlib inline
+# %matplotlib inline
 import pandas as pd
 import matplotlib.pyplot as plt
 
 raw_data = {'officer_name': ['Jason', 'Molly', 'Tina', 'Jake', 'Amy'],
-        'jan_arrests': [4, 24, 31, 2, 3],
-        'feb_arrests': [25, 94, 57, 62, 70],
-        'march_arrests': [5, 43, 23, 23, 51]}
+            'jan_arrests': [4, 24, 31, 2, 3],
+            'feb_arrests': [25, 94, 57, 62, 70],
+            'march_arrests': [5, 43, 23, 23, 51]}
 
-df = pd.DataFrame(raw_data, columns = ['officer_name', 'jan_arrests', 'feb_arrests', 'march_arrests'])
+df = pd.DataFrame(raw_data, columns=['officer_name', 'jan_arrests', 'feb_arrests', 'march_arrests'])
 df['total_arrests'] = df['jan_arrests'] + df['feb_arrests'] + df['march_arrests']
 print(df['total_arrests'])
 # Create a list of colors (from iWantHue)
@@ -29,11 +29,11 @@ plt.pie(
     startangle=90,
     # with the percent listed as a fraction
     autopct='%1.1f%%',
-    )
+)
 
 # View the plot drop above
 plt.axis('equal')
 
 # View the plot
-#plt.tight_layout()
+# plt.tight_layout()
 plt.show()
